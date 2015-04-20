@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.convention.result.path" value="/WEB-INF/jsps/" />
+	<constant name="struts.convention.default.parent.package"
+		value="crud-default" />
+	<constant name="struts.enable.DynamicMethodInvocation" value="true" />
+	<constant name="struts.convention.package.locators" value="web" />
+	<constant name="struts.convention.action.name.separator"
+		value="_" />
+	<constant name="struts.convention.package.locators.basePackage"
+		value="com.plan" />
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.ui.theme" value="simple" />
+	<package name="crud-default" extends="convention-default">
+		<interceptors>
+			<interceptor name="authenticationInterceptor"
+				class="com.plan.common.interceptor.AuthenticationInterceptor" />
+			<interceptor-stack name="crudStack">
+				<interceptor-ref name="authenticationInterceptor" />
+				<interceptor-ref name="store">
+					<param name="operationMode">AUTOMATIC</param>
+				</interceptor-ref>
+				<interceptor-ref name="paramsPrepareParamsStack" />
+			</interceptor-stack>
+		</interceptors>
+
+		<default-interceptor-ref name="crudStack" />
+		<global-results>
+			<result name="login">/WEB-INF/jsps/login/login.jsp</result>
+		</global-results>
+	</package>
+</struts>

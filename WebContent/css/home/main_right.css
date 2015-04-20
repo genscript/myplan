@@ -1,0 +1,9 @@
+body {
+	font-family: Helvetica, 'Hiragino Sans GB', 'Microsoft Yahei', 'Î¢ÈíÑÅºÚ', Arial, sans-serif;
+	background-color:#DDDDDD;
+}
+.calendarTitle{
+	background-color: grey;
+	text-align: center;
+	color: white;
+}
