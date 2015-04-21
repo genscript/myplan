@@ -11,59 +11,77 @@ import com.plan.common.entity.BaseEntity;
 @Entity
 @Table(name = "users", catalog = "customer")
 public class User extends BaseEntity {
-	/**
+
+    /**
 	 * 
 	 */
-	private static final long serialVersionUID = 1346867279863192524L;
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	/**
-	 * 
-	 */
-	private Integer id;
-	private String userName;
-	private String busEmail;
-	private String busPhone;
-	private String password;
+    private static final long serialVersionUID = 1346867279863192524L;
 
-	public Integer getId() {
-		return id;
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /**
+     * 
+     */
+    private Integer id;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    /**
+     * 用户名
+     */
+    private String userName;
 
-	public String getUserName() {
-		return userName;
-	}
+    /**
+     * 邮箱
+     */
+    private String busEmail;
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    /**
+     * 手机号
+     */
+    private String busPhone;
 
-	public String getBusEmail() {
-		return busEmail;
-	}
+    /**
+     * 登录密码
+     */
+    private String password;
 
-	public void setBusEmail(String busEmail) {
-		this.busEmail = busEmail;
-	}
+    public Integer getId() {
+        return id;
+    }
 
-	public String getBusPhone() {
-		return busPhone;
-	}
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
-	public void setBusPhone(String busPhone) {
-		this.busPhone = busPhone;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getBusEmail() {
+        return busEmail;
+    }
+
+    public void setBusEmail(String busEmail) {
+        this.busEmail = busEmail;
+    }
+
+    public String getBusPhone() {
+        return busPhone;
+    }
+
+    public void setBusPhone(String busPhone) {
+        this.busPhone = busPhone;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
 }
