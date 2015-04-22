@@ -13,6 +13,7 @@
 </head>
 
 <body>
+	<div class="bgground"></div>
 	<div class="wrap">
 
 		<form action="login.action" method="post" name="loginForm"

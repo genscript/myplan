@@ -5,3 +5,6 @@ body {
 .dateStyle{
 	margin-left: 30px;
 }
+.buttons{
+	float:right;
+}

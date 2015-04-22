@@ -17,7 +17,7 @@
 			<frame src="home!mainTop.action" name="mainTop" scrolling="no"
 				border="0" framespacing="0" noresize id="mainTop" />
 			<frameset cols="15%,*" frameborder="NO" border="0" framespacing="0"
-				id="MainFrame" name="MainFrame">
+				id="MainFrameSet" name="MainFrame">
 				<frame src="home!leftMenu.action" name="leftMenuFrame" scrolling="auto"
 					noresize id="leftMenuFrame" title="leftMenuFrame" />
 				<frame src="home!main.action" name="mainFrame" scrolling="yes"

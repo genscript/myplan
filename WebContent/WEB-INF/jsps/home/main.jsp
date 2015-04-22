@@ -23,7 +23,11 @@
 <script src="${global_js_url}jquery/jquery.datetimepicker.js"
 	type="text/javascript"></script>
 <script type="text/javascript" src="${global_js_url}plan/home/main.js"></script>
-
+<style type="text/css">
+.typeRadio {
+	background-color: red;
+}
+</style>
 </head>
 
 <body>
@@ -34,40 +38,38 @@
 				<td>${plan.studyContent }</td>
 			</tr>
 		</s:iterator>
-		<tr>
-			<td><img alt="创建新计划" id="newPlan"
-				src="${global_css_url}/img/new_plan.jpg" width="50px" height="50px;">新建计划</td>
-		</tr>
-
 	</table>
-	<div id="newPlanDialog" title="创建新计划" style="visible: hidden">
-		<form action="plan!saveNewPlan.action" method="post">
-			<table>
-				<tr>
-					<th>计划名称</th>
-					<td><input name="planDto.content" /></td>
-				</tr>
-				<tr>
-					<th>计划类型</th>
-					<td><s:select name="planDto.planType" list="planTypeList"
-							listKey="typeId" listValue="name" ></s:select></td>
-				</tr>
-				<tr>
-					<th>开始时间</th>
-					<td><input name="planDto.dateFrom" id="datetimepicker"
-						class="ui-datepicker" type="text" /></td>
-				</tr>
-				<tr>
-					<th>结束时间</th>
-					<td><input name="planDto.dateTo" id="toDate"
-						class="ui-datepicker" type="text" /></td>
-				</tr>
-				<tr>
-					<td><input type="submit" value="确定"></input></td>
-					<td><input type="button" value="取消"></input></td>
-				</tr>
-			</table>
-		</form>
-	</div>
+
+	<form action="plan!saveNewPlan.action" method="post">
+		<table>
+			<tr>
+				<th>计划名称</th>
+				<td><input name="planDto.content" /></td>
+			</tr>
+			<tr>
+				<th>计划类型</th>
+				<td><input type="radio" name="planDto.planType"
+					class="typeRadio"> <input type="radio"
+					name="planDto.planType" class="typeRadio"> <input
+					type="radio" name="planDto.planType" class="typeRadio"> <input
+					type="radio" name="planDto.planType" class="typeRadio">
+			</tr>
+			<tr>
+				<th>开始时间</th>
+				<td><input name="planDto.dateFrom" id="datetimepicker"
+					class="ui-datepicker" type="text" /></td>
+			</tr>
+			<tr>
+				<th>结束时间</th>
+				<td><input name="planDto.dateTo" id="toDate"
+					class="ui-datepicker" type="text" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" value="确定"></input></td>
+				<td><input type="button" value="取消"></input></td>
+			</tr>
+		</table>
+	</form>
+
 </body>
 </html>
