@@ -6,7 +6,11 @@
 <title>main top</title>
 <link rel="stylesheet" type="text/css"
 	href="${global_css_url}home/main_top.css" />
+<link type="text/css"
+	href="${global_css_url}jquery/themes/base/ui.all.css" rel="stylesheet" />
 <script type="text/javascript" src="${global_js_url}jquery/jquery.js"></script>
+<script type="text/javascript"
+	src="${global_js_url}jquery/jquery.dialog.all.js"></script>
 <script type="text/javascript"
 	src="${global_js_url}plan/home/main_top.js"></script>
 

@@ -4,6 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="${global_js_url}jquery/jquery.js"></script>
+<script type="text/javascript"
+	src="${global_js_url}jquery/jquery.dialog.all.js"></script>
 <title>My Plan「计划」</title>
 </head>
 <frameset rows="100,*" frameborder="NO" border="0" framespacing="0"

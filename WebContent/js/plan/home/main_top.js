@@ -1,6 +1,11 @@
 $(function() {
-	$("#newBtn").click(function() {
-		//alert(window.parent.frames["MainLeftSetFrame"].document);
-		alert($("#MainLeftSetFrame",window.parent.document.body).find("#newPlanDialog").dialog('open'));
-	});
+	$("#newBtn").click(
+			function() {
+				// $(window.parent.frames["mainFrame"].document).contents().find(
+				// "#newPlanDialog")[0].open = true;
+				var s = $(window.parent.frames["mainFrame"].document)
+						.contents().find("#newPlanDialog");
+				s.dialog('open');
+
+			});
 });
