@@ -14,5 +14,5 @@ public class StrutsActionContant {
 	public static final String PRIVILEGE_PARAM = "PRIVILEGE_PARAM";
 	public static final String ON_LINE_USERS = "ON_LINE_USERS";
 	public static final String LOCKED_URLS = "LOCKED_URLS";
-	public static final String USER_NAME = "username";
+	public static final String USER_NAME = "username" ;
 }
